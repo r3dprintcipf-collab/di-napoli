@@ -93,7 +93,7 @@
             background-color: var(--accent-color);
         }
 
-        /* HERO SECTION (Fond totalement confondu avec le body) */
+        /* HERO SECTION */
         .hero {
             min-height: 75vh;
             display: flex;
@@ -184,7 +184,7 @@
             font-weight: 500;
         }
 
-        /* MANIFESTO / PHILOSOPHY (Sans boîte blanche, fondu dans le fond) */
+        /* MANIFESTO / PHILOSOPHY */
         .manifesto-container {
             text-align: center;
             margin-bottom: 4rem;
@@ -203,7 +203,7 @@
             line-height: 1.8;
         }
 
-        /* MENU LIST (À la ligne, style épuré Kinu, sans boîtes ni cartes séparées) */
+        /* MENU LIST (À la ligne, style épuré Kinu) */
         .menu-category {
             margin-bottom: 4rem;
         }
@@ -227,7 +227,7 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            background: transparent; /* Fond totalement confondu */
+            background: transparent;
             border-bottom: 1px dashed rgba(0,0,0,0.1);
             padding-bottom: 1.2rem;
         }
@@ -255,7 +255,7 @@
             white-space: nowrap;
         }
 
-        /* INFOS & CONTACT (Sans boîte de couleur contrastée, totalement fondu) */
+        /* INFOS & CONTACT */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -347,122 +347,110 @@
         </div>
     </section>
 
-    <!-- MENU COMPLET EN LISTE (STYLE KINŪ) -->
+    <!-- MENU COMPLET -->
     <section id="menu">
         <div class="section-title">
             <span>La Carte</span>
-            <h2>Nos Plats & Spécialités</h2>
+            <h2>Nos Spécialités Complètes</h2>
         </div>
 
-        <!-- Antipasti & Entrées -->
+        <!-- 1. ENTRÉES (8 articles) -->
         <div class="menu-category">
-            <h3>Antipasti & Entrées</h3>
+            <h3>Entrées</h3>
             <div class="menu-list">
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Bruschetta al Pomodoro</h4>
-                        <p>Pain grillé à l'ail, tomates fraîches, basilic et huile d'olive extra vierge.</p>
-                    </div>
-                    <div class="menu-item-right">4 500 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Carpaccio di Manzo</h4>
-                        <p>Fines tranches de bœuf cru, roquette, copeaux de parmesan et filet de citron.</p>
-                    </div>
-                    <div class="menu-item-right">7 500 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Burrata Fraîche & Tomates Cerises</h4>
-                        <p>Burrata crémeuse, tomates confites, pesto de basilic maison.</p>
-                    </div>
-                    <div class="menu-item-right">8 000 FCFA</div>
-                </div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Carpaccio di Manzo</h4><p>Fines tranches de bœuf cru, roquette, parmesan et citron.</p></div><div class="menu-item-right">7 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Burrata Fraîche</h4><p>Burrata crémeuse, tomates confites, pesto de basilic maison.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Insalata Caprese</h4><p>Tomates fraîches, mozzarella di bufala et feuilles de basilic.</p></div><div class="menu-item-right">6 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Antipasto Misto</h4><p>Assortiment de charcuteries italiennes et fromages affinés.</p></div><div class="menu-item-right">9 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Calamari Fritti</h4><p>Calamars frais croustillants frits, sauce tartare et citron.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Carpaccio di Salmone</h4><p>Saumon mariné à l'aneth, baies roses et huile d'olive.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Soupe du Jour</h4><p>Velouté de légumes frais de saison à l'italienne.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Arancini Siciliani</h4><p>Boules de riz croustillantes farcies au fromage et petits pois.</p></div><div class="menu-item-right">5 500 FCFA</div></div>
             </div>
         </div>
 
-        <!-- Les Pâtes -->
+        <!-- 2. BRUSCHETTA (3 articles) -->
         <div class="menu-category">
-            <h3>Les Pâtes</h3>
+            <h3>Bruschetta</h3>
             <div class="menu-list">
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Tagliatelle ai Frutti di Mare</h4>
-                        <p>Fruits de mer frais sautés à l'ail, tomates cerises fraîches et touche de vin blanc.</p>
-                    </div>
-                    <div class="menu-item-right">12 000 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Penne all'Arrabbiata</h4>
-                        <p>Sauce tomate maison relevée au piment frais, ail et persil plat.</p>
-                    </div>
-                    <div class="menu-item-right">8 500 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Spaghetti Carbonara Tradizionale</h4>
-                        <p>Guanciale croustillant, jaunes d'œufs, pecorino romano et poivre noir.</p>
-                    </div>
-                    <div class="menu-item-right">9 500 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Lasagna Tradizionale</h4>
-                        <p>Pâtes fraîches, ragoût de bœuf mijoté longuement, béchamel et mozzarella.</p>
-                    </div>
-                    <div class="menu-item-right">10 000 FCFA</div>
-                </div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bruschetta Classica</h4><p>Pain grillé frotté à l'ail, tomates fraîches, basilic et huile d'olive.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bruschetta Chèvre Miel</h4><p>Fromage de chèvre fondant, filet de miel et noix concassées.</p></div><div class="menu-item-right">5 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bruschetta Saumon Fumé</h4><p>Crème de ricotta, lamelles de saumon fumé et aneth frais.</p></div><div class="menu-item-right">6 500 FCFA</div></div>
             </div>
         </div>
 
-        <!-- Les Pizzas -->
+        <!-- 3. PLATS (3 articles) -->
         <div class="menu-category">
-            <h3>Nos Pizzas au Feu de Bois</h3>
+            <h3>Plats</h3>
             <div class="menu-list">
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Pizza Margherita</h4>
-                        <p>Sauce tomate San Marzano, mozzarella fior di latte, basilic frais.</p>
-                    </div>
-                    <div class="menu-item-right">7 000 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Pizza Diavola</h4>
-                        <p>Sauce tomate, mozzarella, salami piccante de Calabre et piments.</p>
-                    </div>
-                    <div class="menu-item-right">8 500 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Pizza Quattro Formaggi</h4>
-                        <p>Mozzarella, gorgonzola, parmesan, provolone fondu.</p>
-                    </div>
-                    <div class="menu-item-right">9 000 FCFA</div>
-                </div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Filet de Bœuf Gorgonzola</h4><p>Pavé de bœuf tendre, sauce onctueuse au gorgonzola et frites.</p></div><div class="menu-item-right">14 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Escalope Milanaise</h4><p>Escalope de veau panée croustillante, spaghettis à la sauce tomate.</p></div><div class="menu-item-right">12 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Poisson du Chef Grillé</h4><p>Filet de poisson frais du jour, légumes sautés et huile citronnée.</p></div><div class="menu-item-right">13 000 FCFA</div></div>
             </div>
         </div>
 
-        <!-- Desserts / Dolce Vita -->
+        <!-- 4. NOS PÂTES (6 articles) -->
         <div class="menu-category">
-            <h3>Dolce Vita (Desserts)</h3>
+            <h3>Nos Pâtes</h3>
             <div class="menu-list">
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Tiramisu Classico</h4>
-                        <p>Boudoirs imbibés d'espresso, crème mascarpone aérienne et cacao amer.</p>
-                    </div>
-                    <div class="menu-item-right">5 000 FCFA</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-left">
-                        <h4>Panna Cotta aux Fruits Rouges</h4>
-                        <p>Crème vanillée onctueuse sur son coulis de fruits rouges acidulé.</p>
-                    </div>
-                    <div class="menu-item-right">4 500 FCFA</div>
-                </div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Tagliatelle ai Frutti di Mare</h4><p>Fruits de mer frais sautés à l'ail, tomates cerises et vin blanc.</p></div><div class="menu-item-right">12 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Penne all'Arrabbiata</h4><p>Sauce tomate maison relevée au piment frais, ail et persil.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Spaghetti Carbonara Tradizionale</h4><p>Guanciale croustillant, jaunes d'œufs, pecorino romano et poivre.</p></div><div class="menu-item-right">9 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Lasagna Tradizionale</h4><p>Pâtes fraîches, ragoût de bœuf mijoté, béchamel et mozzarella.</p></div><div class="menu-item-right">10 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Penne al Pesto Genovese</h4><p>Pesto de basilic frais maison, pignons de pin et parmesan.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Spaghetti Bolognese</h4><p>Haché de bœuf mijoté longuement dans une sauce tomate savoureuse.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
+            </div>
+        </div>
+
+        <!-- 5. PIZZAS (15 articles) -->
+        <div class="menu-category">
+            <h3>Pizza (15 variétés)</h3>
+            <div class="menu-list">
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Margherita</h4><p>Sauce tomate San Marzano, mozzarella fior di latte, basilic.</p></div><div class="menu-item-right">7 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Diavola</h4><p>Sauce tomate, mozzarella, salami piccante de Calabre, piments.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Quattro Formaggi</h4><p>Mozzarella, gorgonzola, parmesan, provolone fondu.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Regina</h4><p>Sauce tomate, mozzarella, jambon cuit supérieur et champignons frais.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Calzone (Chausson)</h4><p>Pizza fermée garnie de jambon, mozzarella et œuf.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Vegetariana</h4><p>Légumes de saison grillés, mozzarella et olives noires.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Frutti di Mare</h4><p>Assortiment de fruits de mer frais, ail, persil et mozzarella.</p></div><div class="menu-item-right">11 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Capricciosa</h4><p>Tomate, mozzarella, jambon, champignons, artichauts et olives.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Prosciutto e Rucola</h4><p>Jambon de parme, roquette fraîche et copeaux de parmesan.</p></div><div class="menu-item-right">10 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Tonno e Cipolla</h4><p>Thon émietté, oignons rouges émincés, câpres et mozzarella.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Napoletana</h4><p>Anchois de Méditerranée, câpres, olives et origan.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Boursin & Lardons</h4><p>Base crème, fromage Boursin onctueux et lardons fumés.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Hawaïenne</h4><p>Sauce tomate, mozzarella, jambon et morceaux d'ananas.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Truffe & Mascarpone</h4><p>Crème de truffe noire, mascarpone et champignons sautés.</p></div><div class="menu-item-right">12 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Di Napoli (Spéciale)</h4><p>La pizza signature de la maison aux saveurs ensoleillées.</p></div><div class="menu-item-right">11 500 FCFA</div></div>
+            </div>
+        </div>
+
+        <!-- 6. DESSERTS (2 articles) -->
+        <div class="menu-category">
+            <h3>Desserts</h3>
+            <div class="menu-list">
+                <div class="menu-item"><div class="menu-item-left"><h4>Tiramisu Classico</h4><p>Boudoirs imbibés d'espresso, crème mascarpone aérienne et cacao.</p></div><div class="menu-item-right">5 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Panna Cotta aux Fruits Rouges</h4><p>Crème vanillée onctueuse sur son coulis acidulé.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
+            </div>
+        </div>
+
+        <!-- 7. BOISSONS (14 articles) -->
+        <div class="menu-category">
+            <h3>Boissons</h3>
+            <div class="menu-list">
+                <div class="menu-item"><div class="menu-item-left"><h4>Eau Minérale Plate (50cl)</h4><p>Rafraîchissante et pure.</p></div><div class="menu-item-right">1 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Eau Gazeuse San Pellegrino (75cl)</h4><p>L'eau gazeuse italienne par excellence.</p></div><div class="menu-item-right">3 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Coca-Cola / Coca Zero (33cl)</h4><p>Sodas classiques frais.</p></div><div class="menu-item-right">1 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Fanta / Sprite (33cl)</h4><p>Boissons gazeuses fruitées.</p></div><div class="menu-item-right">1 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Jus de Fruits frais (Orange / Ananas)</h4><p>Pressé minute 100% naturel.</p></div><div class="menu-item-right">2 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bissap Maison</h4><p>Jus traditionnel à la fleur d'hibiscus et menthe.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Gingembre Pressé</h4><p>Jus de gingembre tonique et épicé.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Mocktail Virgin Mojito</h4><p>Menthe fraîche, citron vert, sucre de canne et eau gazeuse.</p></div><div class="menu-item-right">4 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bière Locale (Solibra / Flag)</h4><p>Bière fraîche 65cl.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bière Italienne Peroni</h4><p>Bière blonde italienne authentique.</p></div><div class="menu-item-right">3 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Verre de Vin (Rouge / Blanc)</h4><p>Sélection du sommelier.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Café Espresso Italien</h4><p>Café serré et corsé.</p></div><div class="menu-item-right">1 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Cappuccino</h4><p>Espresso, lait chaud et mousse de lait onctueuse.</p></div><div class="menu-item-right">2 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Thé / Infusion</h4><p>Sélection de thés parfumés.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
             </div>
         </div>
     </section>
