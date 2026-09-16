@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Di Napoli — Restaurant Italien · Abidjan</title>
-    <!-- Google Fonts pour un look moderne et épuré -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Google Fonts : Police script élégante identique aux photos + police propre -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #FAF8F5;
-            --text-color: #2C2A29;
-            --accent-color: #C84B31;
+            --bg-color: #FFFFFF; /* Fond blanc pur comme sur les photos de menu */
+            --text-main: #2C2A29;
+            --brand-wine: #5A1810; /* Le bordeaux / marron chaud typique des titres des photos */
+            --brand-desc: #7A352B; /* Couleur exacte des descriptions bordeaux sur les photos */
             --gray-subtle: #767370;
             --transition: all 0.3s ease;
         }
@@ -24,14 +25,15 @@
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .serif-font {
-            font-family: 'Playfair Display', serif;
+        /* Application de la police manuscrite des photos sur les titres de plats */
+        h1, h2, h3, .menu-item-left h4, .logo {
+            font-family: 'Caveat', cursive;
         }
 
         /* HEADER & NAVIGATION MOBILE FIRST */
@@ -40,10 +42,10 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(250, 248, 245, 0.95);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.04);
+            border-bottom: 1px solid rgba(90, 24, 16, 0.08);
         }
 
         .nav-container {
@@ -56,11 +58,11 @@
         }
 
         .logo {
-            font-size: 1.35rem;
+            font-size: 2rem !important;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            color: var(--text-color);
+            color: var(--brand-wine);
             text-decoration: none;
+            letter-spacing: 0.5px;
         }
 
         .nav-links {
@@ -68,22 +70,23 @@
             gap: 1.2rem;
             list-style: none;
             align-items: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-color);
+            color: var(--text-main);
             font-weight: 500;
             font-size: 0.9rem;
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--brand-wine);
         }
 
         .btn-reserve {
-            background-color: var(--text-color);
+            background-color: var(--brand-wine) !important;
             color: #FFFFFF !important;
             padding: 0.5rem 1rem;
             border-radius: 50px;
@@ -92,14 +95,14 @@
 
         /* HERO SECTION OPTIMISÉE MOBILE */
         .hero {
-            min-height: 70vh;
+            min-height: 65vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 7rem 1.5rem 3rem 1.5rem;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-main);
         }
 
         .hero-content {
@@ -107,14 +110,15 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.3rem, 7vw, 4rem);
-            margin-bottom: 1.2rem;
-            font-weight: 600;
-            letter-spacing: -1px;
-            line-height: 1.15;
+            font-size: clamp(3rem, 9vw, 4.8rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--brand-wine);
+            line-height: 1.1;
         }
 
         .hero p {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1.05rem;
             margin-bottom: 2rem;
             font-weight: 300;
@@ -126,6 +130,7 @@
             gap: 0.8rem;
             justify-content: center;
             flex-wrap: wrap;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         .btn-main, .btn-sec {
@@ -138,21 +143,21 @@
         }
 
         .btn-main {
-            background-color: var(--text-color);
+            background-color: var(--brand-wine);
             color: #FFFFFF;
         }
 
         .btn-main:hover {
-            background-color: var(--accent-color);
+            opacity: 0.9;
         }
 
         .btn-sec {
-            border: 1px solid var(--text-color);
-            color: var(--text-color);
+            border: 1px solid var(--brand-wine);
+            color: var(--brand-wine);
         }
 
         .btn-sec:hover {
-            background-color: var(--text-color);
+            background-color: var(--brand-wine);
             color: #FFFFFF;
         }
 
@@ -169,6 +174,7 @@
         }
 
         .section-title span {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -178,8 +184,9 @@
         }
 
         .section-title h2 {
-            font-size: 2rem;
-            font-weight: 500;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--brand-wine);
         }
 
         /* MANIFESTO / PHILOSOPHIE */
@@ -189,37 +196,39 @@
         }
 
         .manifesto-container h3 {
-            font-size: 1.6rem;
+            font-size: 2.5rem;
             margin-bottom: 0.8rem;
-            font-weight: 500;
+            font-weight: 700;
+            color: var(--brand-wine);
         }
 
         .manifesto-container p {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1rem;
             color: var(--gray-subtle);
             margin-bottom: 0.8rem;
             line-height: 1.7;
         }
 
-        /* MENU LIST OPTIMISÉ TÉLÉPHONE */
+        /* MENU LIST IDENTIQUE AUX PHOTOS */
         .menu-category {
             margin-bottom: 3.5rem;
         }
 
         .menu-category h3 {
-            font-size: 1.4rem;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
-            padding-bottom: 0.6rem;
-            color: var(--accent-color);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(90, 24, 16, 0.12);
+            padding-bottom: 0.4rem;
+            color: var(--brand-wine);
         }
 
         .menu-list {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.4rem;
         }
 
         .menu-item {
@@ -227,7 +236,7 @@
             justify-content: space-between;
             align-items: flex-start;
             background: transparent;
-            border-bottom: 1px dashed rgba(0,0,0,0.08);
+            border-bottom: 1px dashed rgba(90, 24, 16, 0.08);
             padding-bottom: 1rem;
             gap: 1rem;
         }
@@ -236,32 +245,42 @@
             flex: 1;
         }
 
+        /* Style des noms de plats (police Caveat, taille généreuse et couleur bordeaux) */
         .menu-item-left h4 {
-            font-size: 1.05rem;
+            font-size: 1.7rem;
             font-weight: 600;
-            margin-bottom: 0.2rem;
-            color: var(--text-color);
+            margin-bottom: 0.1rem;
+            color: var(--brand-wine);
+            letter-spacing: 0.3px;
         }
 
+        /* Style des descriptions de plats (exactement le bordeaux/marron clair des photos) */
         .menu-item-left p {
-            font-size: 0.88rem;
-            color: var(--gray-subtle);
-            line-height: 1.4;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--brand-desc);
+            font-style: italic;
+            line-height: 1.35;
         }
 
+        /* Style des prix (alignés sur les photos) */
         .menu-item-right {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 1rem;
             font-weight: 600;
-            color: var(--text-color);
+            color: var(--text-main);
             white-space: nowrap;
+            padding-top: 0.3rem;
         }
 
         .sub-price {
-            font-size: 0.8rem;
-            color: var(--accent-color);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.75rem;
+            color: var(--brand-desc);
             display: block;
             text-align: right;
             margin-top: 0.1rem;
+            font-style: italic;
         }
 
         /* INFOS & CONTACT */
@@ -273,12 +292,14 @@
         }
 
         .info-box h3 {
-            font-size: 1.35rem;
+            font-size: 2.2rem;
             margin-bottom: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--brand-wine);
         }
 
         .info-box p {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             margin-bottom: 0.6rem;
             color: var(--gray-subtle);
             font-size: 1rem;
@@ -288,18 +309,16 @@
         footer {
             text-align: center;
             padding: 3rem 1.5rem;
-            border-top: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(90, 24, 16, 0.08);
             color: var(--gray-subtle);
             font-size: 0.85rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
-        /* MEDIA QUERIES POUR PC (Écrans larges) */
+        /* MEDIA QUERIES POUR PC */
         @media (min-width: 768px) {
             .nav-container {
                 padding: 1.2rem 2rem;
-            }
-            .logo {
-                font-size: 1.5rem;
             }
             section {
                 padding: 5rem 2rem;
@@ -331,7 +350,7 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Les pâtes, le soleil et la dolce vita 🍋</h1>
+            <h1>Menu</h1>
             <p>BENVENUTO A DI NAPOLI — Au cœur d'Abidjan, découvrez une cuisine italienne originale, généreuse et gourmande.</p>
             <div class="hero-btns">
                 <a href="#menu" class="btn-main">Découvrir le Menu</a>
@@ -357,21 +376,21 @@
     <section id="menu">
         <div class="section-title">
             <span>La Carte</span>
-            <h2>Notre Menu Officiel</h2>
+            <h2>Nos Spécialités</h2>
         </div>
 
         <!-- 1. NOS ENTRÉES -->
         <div class="menu-category">
             <h3>Nos Entrées</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Frites à la Truffe</h4></div><div class="menu-item-right">6 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Parmigiana di Melanzane</h4><p>gratin d'aubergines à la tomate, parmesan</p></div><div class="menu-item-right">6 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Salade César</h4><p>laitue, croutons de pain, poulet pané ou à la poêle, parmesan, sauce césar</p></div><div class="menu-item-right">9 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Salade de pâtes au thon</h4></div><div class="menu-item-right">8 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Salade Kale</h4><p>Kale, quinoa, poulet à la poêle, amandes grillées, canneberges séchées</p></div><div class="menu-item-right">7 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Halloumi sticks</h4><p>Des bâtonnets de halloumi dorés et sa sauce</p></div><div class="menu-item-right">8 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Salade Burrata</h4></div><div class="menu-item-right">9 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Salade Chèvre</h4></div><div class="menu-item-right">9 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Frites à la Truffe</h4></div><div class="menu-item-right">6000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Parmigiana di Melanzane</h4><p>gratin d'aubergines à la tomate, parmesan</p></div><div class="menu-item-right">6000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade César</h4><p>laitue, croutons de pain, poulet pané ou à la poêle, parmesan, sauce césar</p></div><div class="menu-item-right">9000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade de pâtes au thon</h4></div><div class="menu-item-right">8000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade Kale</h4><p>Kale, quinoa, poulet à la poêle, amandes grillées, canneberges séchées</p></div><div class="menu-item-right">7000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Halloumi sticks</h4><p>Des bâtonnets de halloumi dorés et sa sauce</p></div><div class="menu-item-right">8000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade Burrata</h4></div><div class="menu-item-right">9000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade Chèvre</h4></div><div class="menu-item-right">9000fr</div></div>
             </div>
         </div>
 
@@ -379,9 +398,9 @@
         <div class="menu-category">
             <h3>Bruschettas</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Chèvre, miel et figue</h4></div><div class="menu-item-right">6 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Avocat saumon</h4></div><div class="menu-item-right">6 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Avocat halloumi grillé</h4></div><div class="menu-item-right">5 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Chèvre, miel et figue</h4></div><div class="menu-item-right">6000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Avocat saumon</h4></div><div class="menu-item-right">6500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Avocat halloumi grillé</h4></div><div class="menu-item-right">5000fr</div></div>
             </div>
         </div>
 
@@ -389,9 +408,9 @@
         <div class="menu-category">
             <h3>Nos Plats</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Bifteck de Bœuf</h4><p>filet de bœuf à la crème accompagné de frites ou de pâtes</p></div><div class="menu-item-right">13 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Poulet parmigiana</h4><p>poulet parmigiana accompagné de frites ou de pâtes</p></div><div class="menu-item-right">11 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pavé de mérou à la crème</h4><p>filet de mérou, crème de citron, estragon, accompagné de frites</p></div><div class="menu-item-right">13 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bifteck de Bœuf</h4><p>filet de bœuf à la crème accompagné de frites ou de pâtes</p></div><div class="menu-item-right">13.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Poulet parmigiana</h4><p>poulet parmigiana accompagné de frites ou de pâtes</p></div><div class="menu-item-right">11.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pavé de mérou à la crème</h4><p>filet de mérou, crème de citron, estragon, accompagné de frites</p></div><div class="menu-item-right">13.000fr</div></div>
             </div>
         </div>
 
@@ -399,12 +418,12 @@
         <div class="menu-category">
             <h3>Nos Pâtes</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Alfredo</h4><p>penne, poulet à la poêle, champignons de paris, crème fraîche, parmesan</p></div><div class="menu-item-right">7 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pesto</h4><p>linguine, poulet à la poêle, pesto maison, parmesan</p></div><div class="menu-item-right">8 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Bolognese</h4><p>spaghetti, ragù de bœuf, parmesan</p></div><div class="menu-item-right">7 000 fr<span class="sub-price">rosé 8 000fr</span></div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Quattro fromaggi</h4><p>penne, crème de mascarpone roquefort, chèvre, parmesan</p></div><div class="menu-item-right">9 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Fusili gambas</h4><p>fusili, gambas à la poêle, parmesan, crème de curry ou rosé</p></div><div class="menu-item-right">12 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Truffe</h4><p>penne, poulet à la poêle, champignons de paris, crème de truffe, parmesan</p></div><div class="menu-item-right">14 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Alfredo</h4><p>penne, poulet à la poêle, champignons de paris, crème fraîche, parmesan</p></div><div class="menu-item-right">7500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pesto</h4><p>linguine, poulet à la poêle, pesto maison, parmesan</p></div><div class="menu-item-right">8000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bolognese</h4><p>spaghetti, ragù de bœuf, parmesan</p></div><div class="menu-item-right">7000fr<span class="sub-price">rosé 8000fr</span></div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Quattro fromaggi</h4><p>penne, crème de mascarpone roquefort, chèvre, parmesan</p></div><div class="menu-item-right">9000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Fusili gambas</h4><p>fusili, gambas à la poêle, parmesan, crème de curry ou rosé</p></div><div class="menu-item-right">12.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Truffe</h4><p>penne, poulet à la poêle, champignons de paris, crème de truffe, parmesan</p></div><div class="menu-item-right">14.000fr</div></div>
             </div>
         </div>
 
@@ -412,21 +431,21 @@
         <div class="menu-category">
             <h3>Nos Pizzas</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Margherita</h4><p>sauce tomate, fior di latte, basilic</p></div><div class="menu-item-right">7 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Reine</h4><p>sauce tomate, mozzarella, champignons de paris, olives</p></div><div class="menu-item-right">8 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Royale</h4><p>sauce tomate, mozzarella, jambon de bœuf, champignons de paris</p></div><div class="menu-item-right">9 000 fr<span class="sub-price">crème/mozza: 10 500fr</span></div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Végétarienne</h4><p>sauce tomate, mozzarella, oignons et poivrons caramélisés, aubergines, champignon de Paris</p></div><div class="menu-item-right">9 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Napolitaine</h4><p>sauce tomate, fior di latte, anchois, olives, basilic</p></div><div class="menu-item-right">9 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pepperoni</h4><p>sauce tomate, mozzarella pepperoni de bœuf</p></div><div class="menu-item-right">10 000 fr<span class="sub-price">hot honey: 11 500fr</span></div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Scampi</h4><p>sauce tomate, mozzarella, gambas</p></div><div class="menu-item-right">10 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Arménienne</h4><p>sauce tomate, mozzarella, viande hachée à l'arménienne</p></div><div class="menu-item-right">9 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Mexicaine</h4><p>sauce tomate, mozzarella, poivrons et oignons caramélisés, viande hachée sauce mexicaine</p></div><div class="menu-item-right">11 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Norvégienne</h4><p>crème au beurre de citron saumon fumé, câpres, ciboulettes</p></div><div class="menu-item-right">13 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Quattro fromaggi</h4><p>un mélange fondant de quatre fromages à chaque bouchée</p></div><div class="menu-item-right">12 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Chèvre Miel</h4><p>crème, fromage de chèvre roquette, noix, miel</p></div><div class="menu-item-right">12 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Burrata</h4><p>sauce tomate, mozzarella, burrata, pesto, pistache, crème de vinaigre balsamique</p></div><div class="menu-item-right">14 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Swiss mushroom</h4><p>crème aux champignons de paris mozzarella, gruyère</p></div><div class="menu-item-right">13 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Truffe</h4><p>crème de truffe, fior di latte, champignons de paris sautés</p></div><div class="menu-item-right">15 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Margherita</h4><p>sauce tomate, fior di latte, basilic</p></div><div class="menu-item-right">7500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Reine</h4><p>sauce tomate, mozzarella, champignons de paris, olives</p></div><div class="menu-item-right">8500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Royale</h4><p>sauce tomate, mozzarella, jambon de bœuf, champignons de paris</p></div><div class="menu-item-right">9000fr<span class="sub-price">crème/mozza: 10.500fr</span></div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Végétarienne</h4><p>sauce tomate, mozzarella, oignons et poivrons caramélisés, aubergines, champignon de Paris</p></div><div class="menu-item-right">9000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Napolitaine</h4><p>sauce tomate, fior di latte, anchois, olives, basilic</p></div><div class="menu-item-right">9000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pepperoni</h4><p>sauce tomate, mozzarella pepperoni de bœuf</p></div><div class="menu-item-right">10.000fr<span class="sub-price">hot honey: 11.500fr</span></div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Scampi</h4><p>sauce tomate, mozzarella, gambas</p></div><div class="menu-item-right">10.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Arménienne</h4><p>sauce tomate, mozzarella, viande hachée à l'arménienne</p></div><div class="menu-item-right">9000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Mexicaine</h4><p>sauce tomate, mozzarella, poivrons et oignons caramélisés, viande hachée sauce mexicaine</p></div><div class="menu-item-right">11.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Norvégienne</h4><p>crème au beurre de citron saumon fumé, câpres, ciboulettes</p></div><div class="menu-item-right">13.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Quattro fromaggi</h4><p>un mélange fondant de quatre fromages à chaque bouchée</p></div><div class="menu-item-right">12.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Chèvre Miel</h4><p>crème, fromage de chèvre roquette, noix, miel</p></div><div class="menu-item-right">12.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Burrata</h4><p>sauce tomate, mozzarella, burrata, pesto, pistache, crème de vinaigre balsamique</p></div><div class="menu-item-right">14.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Swiss mushroom</h4><p>crème aux champignons de paris mozzarella, gruyère</p></div><div class="menu-item-right">13.000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Truffe</h4><p>crème de truffe, fior di latte, champignons de paris sautés</p></div><div class="menu-item-right">15.000fr</div></div>
             </div>
         </div>
 
@@ -434,8 +453,8 @@
         <div class="menu-category">
             <h3>Nos Desserts</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Tiramisu</h4><p>un tiramisu fait maison, à l'italienne</p></div><div class="menu-item-right">4 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Dolce nella</h4><p>pâte croustillante dorée délicieusement fourrée de nutella</p></div><div class="menu-item-right">7 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Tiramisu</h4><p>un tiramisu fait maison, à l'italienne</p></div><div class="menu-item-right">4000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Dolce nella</h4><p>pâte croustillante dorée délicieusement fourrée de nutella</p></div><div class="menu-item-right">7500fr</div></div>
             </div>
         </div>
 
@@ -443,20 +462,20 @@
         <div class="menu-category">
             <h3>Nos Boissons</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Les softs</h4></div><div class="menu-item-right">1 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Ice tea pêche</h4></div><div class="menu-item-right">2 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Redbull</h4></div><div class="menu-item-right">2 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Schweppes</h4></div><div class="menu-item-right">2 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Eau pétillante</h4></div><div class="menu-item-right">2 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Eau minérale</h4></div><div class="menu-item-right">1 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Jus d'orange</h4></div><div class="menu-item-right">3 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Limonade maison</h4></div><div class="menu-item-right">3 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Espresso</h4></div><div class="menu-item-right">1 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Lipton</h4></div><div class="menu-item-right">1 500 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Capuccino</h4></div><div class="menu-item-right">3 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Café latte</h4></div><div class="menu-item-right">3 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Iced caramel</h4></div><div class="menu-item-right">3 000 fr</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Chocolat chaud</h4></div><div class="menu-item-right">3 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Les softs</h4></div><div class="menu-item-right">1500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Ice tea pêche</h4></div><div class="menu-item-right">2000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Redbull</h4></div><div class="menu-item-right">2000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Schweppes</h4></div><div class="menu-item-right">2000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Eau pétillante</h4></div><div class="menu-item-right">2500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Eau minérale</h4></div><div class="menu-item-right">1000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Jus d'orange</h4></div><div class="menu-item-right">3000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Limonade maison</h4></div><div class="menu-item-right">3500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Espresso</h4></div><div class="menu-item-right">1500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Lipton</h4></div><div class="menu-item-right">1500fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Capuccino</h4></div><div class="menu-item-right">3000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Café latte</h4></div><div class="menu-item-right">3000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Iced caramel</h4></div><div class="menu-item-right">3000fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Chocolat chaud</h4></div><div class="menu-item-right">3000fr</div></div>
             </div>
         </div>
     </section>
@@ -472,7 +491,7 @@
                 <h3>Où nous trouver ?</h3>
                 <p><strong>Ville :</strong> Abidjan, Côte d'Ivoire</p>
                 <p><strong>Adresse :</strong> Prima Center (Marcory Zone 4)</p>
-                <p><strong>Téléphone :</strong> <a href="tel:0703606060" style="color:var(--text-color); text-decoration:underline;">07 03 60 60 60</a></p>
+                <p><strong>Téléphone :</strong> <a href="tel:0703606060" style="color:var(--brand-wine); text-decoration:underline;">07 03 60 60 60</a></p>
             </div>
             <div class="info-box">
                 <h3>Horaires d'Ouverture</h3>
@@ -487,7 +506,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Design épuré & fluide ✨</p>
+        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Design fidèle au menu original ✨</p>
     </footer>
 
 </body>
