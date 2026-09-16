@@ -27,13 +27,14 @@
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
         h1, h2, h3, .serif-font {
             font-family: 'Playfair Display', serif;
         }
 
-        /* HEADER & NAVIGATION */
+        /* HEADER & NAVIGATION MOBILE FIRST */
         header {
             position: fixed;
             top: 0;
@@ -46,16 +47,16 @@
         }
 
         .nav-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 1.2rem 2rem;
+            padding: 1rem 1.2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.35rem;
             font-weight: 700;
             letter-spacing: -0.5px;
             color: var(--text-color);
@@ -64,7 +65,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.2rem;
             list-style: none;
             align-items: center;
         }
@@ -73,7 +74,7 @@
             text-decoration: none;
             color: var(--text-color);
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: var(--transition);
         }
 
@@ -84,58 +85,55 @@
         .btn-reserve {
             background-color: var(--text-color);
             color: #FFFFFF !important;
-            padding: 0.6rem 1.2rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
-            transition: var(--transition);
+            font-size: 0.85rem !important;
         }
 
-        .btn-reserve:hover {
-            background-color: var(--accent-color);
-        }
-
-        /* HERO SECTION */
+        /* HERO SECTION OPTIMISÉE MOBILE */
         .hero {
-            min-height: 75vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 8rem 2rem 4rem 2rem;
+            padding: 7rem 1.5rem 3rem 1.5rem;
             background-color: var(--bg-color);
             color: var(--text-color);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 700px;
         }
 
         .hero h1 {
-            font-size: clamp(2.8rem, 5vw, 4.5rem);
-            margin-bottom: 1.5rem;
+            font-size: clamp(2.3rem, 7vw, 4rem);
+            margin-bottom: 1.2rem;
             font-weight: 600;
             letter-spacing: -1px;
-            line-height: 1.2;
+            line-height: 1.15;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
             font-weight: 300;
             color: var(--gray-subtle);
         }
 
         .hero-btns {
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn-main, .btn-sec {
-            padding: 0.8rem 1.8rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: var(--transition);
         }
 
@@ -160,149 +158,158 @@
 
         /* SECTIONS GENERAL */
         section {
-            padding: 5rem 2rem;
-            max-width: 850px;
+            padding: 4rem 1.2rem;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 3rem;
         }
 
         .section-title span {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--gray-subtle);
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .section-title h2 {
-            font-size: 2.3rem;
+            font-size: 2rem;
             font-weight: 500;
         }
 
-        /* MANIFESTO / PHILOSOPHY */
+        /* MANIFESTO / PHILOSOPHIE */
         .manifesto-container {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .manifesto-container h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            margin-bottom: 0.8rem;
             font-weight: 500;
         }
 
         .manifesto-container p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--gray-subtle);
-            margin-bottom: 1rem;
-            line-height: 1.8;
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
         }
 
-        /* MENU LIST (À la ligne, style épuré Kinu) */
+        /* MENU LIST OPTIMISÉ TÉLÉPHONE */
         .menu-category {
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
         }
 
         .menu-category h3 {
-            font-size: 1.6rem;
-            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
             letter-spacing: -0.5px;
             border-bottom: 1px solid rgba(0,0,0,0.08);
-            padding-bottom: 0.8rem;
+            padding-bottom: 0.6rem;
+            color: var(--accent-color);
         }
 
         .menu-list {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
             background: transparent;
-            border-bottom: 1px dashed rgba(0,0,0,0.1);
-            padding-bottom: 1.2rem;
+            border-bottom: 1px dashed rgba(0,0,0,0.08);
+            padding-bottom: 1rem;
+            gap: 1rem;
         }
 
         .menu-item-left {
-            max-width: 75%;
+            flex: 1;
         }
 
         .menu-item-left h4 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
             color: var(--text-color);
         }
 
         .menu-item-left p {
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             color: var(--gray-subtle);
+            line-height: 1.4;
         }
 
         .menu-item-right {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--accent-color);
+            color: var(--text-color);
             white-space: nowrap;
+        }
+
+        .sub-price {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            display: block;
+            text-align: right;
+            margin-top: 0.1rem;
         }
 
         /* INFOS & CONTACT */
         .info-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 1rem;
         }
 
         .info-box h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
             font-weight: 600;
         }
 
         .info-box p {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             color: var(--gray-subtle);
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 3rem 1.5rem;
             border-top: 1px solid rgba(0,0,0,0.05);
             color: var(--gray-subtle);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+        /* MEDIA QUERIES POUR PC (Écrans larges) */
+        @media (min-width: 768px) {
+            .nav-container {
+                padding: 1.2rem 2rem;
+            }
+            .logo {
+                font-size: 1.5rem;
+            }
+            section {
+                padding: 5rem 2rem;
             }
             .info-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-            .hero h1 {
-                font-size: 2.3rem;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
             }
             .menu-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.3rem;
-            }
-            .menu-item-left {
-                max-width: 100%;
+                align-items: baseline;
             }
         }
     </style>
@@ -314,9 +321,8 @@
         <div class="nav-container">
             <a href="#" class="logo">Di Napoli.</a>
             <ul class="nav-links">
-                <li><a href="#about">Le Concept</a></li>
                 <li><a href="#menu">Menu</a></li>
-                <li><a href="#info">Infos & Contact</a></li>
+                <li><a href="#info">Contact</a></li>
                 <li><a href="tel:0703606060" class="btn-reserve">07 03 60 60 60</a></li>
             </ul>
         </div>
@@ -347,110 +353,110 @@
         </div>
     </section>
 
-    <!-- MENU COMPLET -->
+    <!-- MENU COMPLET OFFICIEL -->
     <section id="menu">
         <div class="section-title">
             <span>La Carte</span>
-            <h2>Nos Spécialités Complètes</h2>
+            <h2>Notre Menu Officiel</h2>
         </div>
 
-        <!-- 1. ENTRÉES (8 articles) -->
+        <!-- 1. NOS ENTRÉES -->
         <div class="menu-category">
-            <h3>Entrées</h3>
+            <h3>Nos Entrées</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Carpaccio di Manzo</h4><p>Fines tranches de bœuf cru, roquette, parmesan et citron.</p></div><div class="menu-item-right">7 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Burrata Fraîche</h4><p>Burrata crémeuse, tomates confites, pesto de basilic maison.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Insalata Caprese</h4><p>Tomates fraîches, mozzarella di bufala et feuilles de basilic.</p></div><div class="menu-item-right">6 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Antipasto Misto</h4><p>Assortiment de charcuteries italiennes et fromages affinés.</p></div><div class="menu-item-right">9 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Calamari Fritti</h4><p>Calamars frais croustillants frits, sauce tartare et citron.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Carpaccio di Salmone</h4><p>Saumon mariné à l'aneth, baies roses et huile d'olive.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Soupe du Jour</h4><p>Velouté de légumes frais de saison à l'italienne.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Arancini Siciliani</h4><p>Boules de riz croustillantes farcies au fromage et petits pois.</p></div><div class="menu-item-right">5 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Frites à la Truffe</h4></div><div class="menu-item-right">6 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Parmigiana di Melanzane</h4><p>gratin d'aubergines à la tomate, parmesan</p></div><div class="menu-item-right">6 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade César</h4><p>laitue, croutons de pain, poulet pané ou à la poêle, parmesan, sauce césar</p></div><div class="menu-item-right">9 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade de pâtes au thon</h4></div><div class="menu-item-right">8 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade Kale</h4><p>Kale, quinoa, poulet à la poêle, amandes grillées, canneberges séchées</p></div><div class="menu-item-right">7 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Halloumi sticks</h4><p>Des bâtonnets de halloumi dorés et sa sauce</p></div><div class="menu-item-right">8 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade Burrata</h4></div><div class="menu-item-right">9 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Salade Chèvre</h4></div><div class="menu-item-right">9 000 fr</div></div>
             </div>
         </div>
 
-        <!-- 2. BRUSCHETTA (3 articles) -->
+        <!-- 2. BRUSCHETTAS -->
         <div class="menu-category">
-            <h3>Bruschetta</h3>
+            <h3>Bruschettas</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Bruschetta Classica</h4><p>Pain grillé frotté à l'ail, tomates fraîches, basilic et huile d'olive.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Bruschetta Chèvre Miel</h4><p>Fromage de chèvre fondant, filet de miel et noix concassées.</p></div><div class="menu-item-right">5 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Bruschetta Saumon Fumé</h4><p>Crème de ricotta, lamelles de saumon fumé et aneth frais.</p></div><div class="menu-item-right">6 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Chèvre, miel et figue</h4></div><div class="menu-item-right">6 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Avocat saumon</h4></div><div class="menu-item-right">6 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Avocat halloumi grillé</h4></div><div class="menu-item-right">5 000 fr</div></div>
             </div>
         </div>
 
-        <!-- 3. PLATS (3 articles) -->
+        <!-- 3. NOS PLATS -->
         <div class="menu-category">
-            <h3>Plats</h3>
+            <h3>Nos Plats</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Filet de Bœuf Gorgonzola</h4><p>Pavé de bœuf tendre, sauce onctueuse au gorgonzola et frites.</p></div><div class="menu-item-right">14 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Escalope Milanaise</h4><p>Escalope de veau panée croustillante, spaghettis à la sauce tomate.</p></div><div class="menu-item-right">12 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Poisson du Chef Grillé</h4><p>Filet de poisson frais du jour, légumes sautés et huile citronnée.</p></div><div class="menu-item-right">13 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bifteck de Bœuf</h4><p>filet de bœuf à la crème accompagné de frites ou de pâtes</p></div><div class="menu-item-right">13 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Poulet parmigiana</h4><p>poulet parmigiana accompagné de frites ou de pâtes</p></div><div class="menu-item-right">11 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pavé de mérou à la crème</h4><p>filet de mérou, crème de citron, estragon, accompagné de frites</p></div><div class="menu-item-right">13 000 fr</div></div>
             </div>
         </div>
 
-        <!-- 4. NOS PÂTES (6 articles) -->
+        <!-- 4. NOS PÂTES -->
         <div class="menu-category">
             <h3>Nos Pâtes</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Tagliatelle ai Frutti di Mare</h4><p>Fruits de mer frais sautés à l'ail, tomates cerises et vin blanc.</p></div><div class="menu-item-right">12 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Penne all'Arrabbiata</h4><p>Sauce tomate maison relevée au piment frais, ail et persil.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Spaghetti Carbonara Tradizionale</h4><p>Guanciale croustillant, jaunes d'œufs, pecorino romano et poivre.</p></div><div class="menu-item-right">9 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Lasagna Tradizionale</h4><p>Pâtes fraîches, ragoût de bœuf mijoté, béchamel et mozzarella.</p></div><div class="menu-item-right">10 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Penne al Pesto Genovese</h4><p>Pesto de basilic frais maison, pignons de pin et parmesan.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Spaghetti Bolognese</h4><p>Haché de bœuf mijoté longuement dans une sauce tomate savoureuse.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Alfredo</h4><p>penne, poulet à la poêle, champignons de paris, crème fraîche, parmesan</p></div><div class="menu-item-right">7 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pesto</h4><p>linguine, poulet à la poêle, pesto maison, parmesan</p></div><div class="menu-item-right">8 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Bolognese</h4><p>spaghetti, ragù de bœuf, parmesan</p></div><div class="menu-item-right">7 000 fr<span class="sub-price">rosé 8 000fr</span></div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Quattro fromaggi</h4><p>penne, crème de mascarpone roquefort, chèvre, parmesan</p></div><div class="menu-item-right">9 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Fusili gambas</h4><p>fusili, gambas à la poêle, parmesan, crème de curry ou rosé</p></div><div class="menu-item-right">12 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Truffe</h4><p>penne, poulet à la poêle, champignons de paris, crème de truffe, parmesan</p></div><div class="menu-item-right">14 000 fr</div></div>
             </div>
         </div>
 
-        <!-- 5. PIZZAS (15 articles) -->
+        <!-- 5. NOS PIZZAS -->
         <div class="menu-category">
-            <h3>Pizza (15 variétés)</h3>
+            <h3>Nos Pizzas</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Margherita</h4><p>Sauce tomate San Marzano, mozzarella fior di latte, basilic.</p></div><div class="menu-item-right">7 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Diavola</h4><p>Sauce tomate, mozzarella, salami piccante de Calabre, piments.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Quattro Formaggi</h4><p>Mozzarella, gorgonzola, parmesan, provolone fondu.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Regina</h4><p>Sauce tomate, mozzarella, jambon cuit supérieur et champignons frais.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Calzone (Chausson)</h4><p>Pizza fermée garnie de jambon, mozzarella et œuf.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Vegetariana</h4><p>Légumes de saison grillés, mozzarella et olives noires.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Frutti di Mare</h4><p>Assortiment de fruits de mer frais, ail, persil et mozzarella.</p></div><div class="menu-item-right">11 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Capricciosa</h4><p>Tomate, mozzarella, jambon, champignons, artichauts et olives.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Prosciutto e Rucola</h4><p>Jambon de parme, roquette fraîche et copeaux de parmesan.</p></div><div class="menu-item-right">10 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Tonno e Cipolla</h4><p>Thon émietté, oignons rouges émincés, câpres et mozzarella.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Napoletana</h4><p>Anchois de Méditerranée, câpres, olives et origan.</p></div><div class="menu-item-right">8 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Boursin & Lardons</h4><p>Base crème, fromage Boursin onctueux et lardons fumés.</p></div><div class="menu-item-right">9 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Hawaïenne</h4><p>Sauce tomate, mozzarella, jambon et morceaux d'ananas.</p></div><div class="menu-item-right">8 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Truffe & Mascarpone</h4><p>Crème de truffe noire, mascarpone et champignons sautés.</p></div><div class="menu-item-right">12 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Pizza Di Napoli (Spéciale)</h4><p>La pizza signature de la maison aux saveurs ensoleillées.</p></div><div class="menu-item-right">11 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Margherita</h4><p>sauce tomate, fior di latte, basilic</p></div><div class="menu-item-right">7 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Reine</h4><p>sauce tomate, mozzarella, champignons de paris, olives</p></div><div class="menu-item-right">8 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Royale</h4><p>sauce tomate, mozzarella, jambon de bœuf, champignons de paris</p></div><div class="menu-item-right">9 000 fr<span class="sub-price">crème/mozza: 10 500fr</span></div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Végétarienne</h4><p>sauce tomate, mozzarella, oignons et poivrons caramélisés, aubergines, champignon de Paris</p></div><div class="menu-item-right">9 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Napolitaine</h4><p>sauce tomate, fior di latte, anchois, olives, basilic</p></div><div class="menu-item-right">9 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Pepperoni</h4><p>sauce tomate, mozzarella pepperoni de bœuf</p></div><div class="menu-item-right">10 000 fr<span class="sub-price">hot honey: 11 500fr</span></div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Scampi</h4><p>sauce tomate, mozzarella, gambas</p></div><div class="menu-item-right">10 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Arménienne</h4><p>sauce tomate, mozzarella, viande hachée à l'arménienne</p></div><div class="menu-item-right">9 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Mexicaine</h4><p>sauce tomate, mozzarella, poivrons et oignons caramélisés, viande hachée sauce mexicaine</p></div><div class="menu-item-right">11 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Norvégienne</h4><p>crème au beurre de citron saumon fumé, câpres, ciboulettes</p></div><div class="menu-item-right">13 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Quattro fromaggi</h4><p>un mélange fondant de quatre fromages à chaque bouchée</p></div><div class="menu-item-right">12 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Chèvre Miel</h4><p>crème, fromage de chèvre roquette, noix, miel</p></div><div class="menu-item-right">12 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Burrata</h4><p>sauce tomate, mozzarella, burrata, pesto, pistache, crème de vinaigre balsamique</p></div><div class="menu-item-right">14 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Swiss mushroom</h4><p>crème aux champignons de paris mozzarella, gruyère</p></div><div class="menu-item-right">13 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Truffe</h4><p>crème de truffe, fior di latte, champignons de paris sautés</p></div><div class="menu-item-right">15 000 fr</div></div>
             </div>
         </div>
 
-        <!-- 6. DESSERTS (2 articles) -->
+        <!-- 6. NOS DESSERTS -->
         <div class="menu-category">
-            <h3>Desserts</h3>
+            <h3>Nos Desserts</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Tiramisu Classico</h4><p>Boudoirs imbibés d'espresso, crème mascarpone aérienne et cacao.</p></div><div class="menu-item-right">5 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Panna Cotta aux Fruits Rouges</h4><p>Crème vanillée onctueuse sur son coulis acidulé.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Tiramisu</h4><p>un tiramisu fait maison, à l'italienne</p></div><div class="menu-item-right">4 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Dolce nella</h4><p>pâte croustillante dorée délicieusement fourrée de nutella</p></div><div class="menu-item-right">7 500 fr</div></div>
             </div>
         </div>
 
-        <!-- 7. BOISSONS (14 articles) -->
+        <!-- 7. NOS BOISSONS -->
         <div class="menu-category">
-            <h3>Boissons</h3>
+            <h3>Nos Boissons</h3>
             <div class="menu-list">
-                <div class="menu-item"><div class="menu-item-left"><h4>Eau Minérale Plate (50cl)</h4><p>Rafraîchissante et pure.</p></div><div class="menu-item-right">1 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Eau Gazeuse San Pellegrino (75cl)</h4><p>L'eau gazeuse italienne par excellence.</p></div><div class="menu-item-right">3 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Coca-Cola / Coca Zero (33cl)</h4><p>Sodas classiques frais.</p></div><div class="menu-item-right">1 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Fanta / Sprite (33cl)</h4><p>Boissons gazeuses fruitées.</p></div><div class="menu-item-right">1 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Jus de Fruits frais (Orange / Ananas)</h4><p>Pressé minute 100% naturel.</p></div><div class="menu-item-right">2 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Bissap Maison</h4><p>Jus traditionnel à la fleur d'hibiscus et menthe.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Gingembre Pressé</h4><p>Jus de gingembre tonique et épicé.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Mocktail Virgin Mojito</h4><p>Menthe fraîche, citron vert, sucre de canne et eau gazeuse.</p></div><div class="menu-item-right">4 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Bière Locale (Solibra / Flag)</h4><p>Bière fraîche 65cl.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Bière Italienne Peroni</h4><p>Bière blonde italienne authentique.</p></div><div class="menu-item-right">3 000 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Verre de Vin (Rouge / Blanc)</h4><p>Sélection du sommelier.</p></div><div class="menu-item-right">4 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Café Espresso Italien</h4><p>Café serré et corsé.</p></div><div class="menu-item-right">1 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Cappuccino</h4><p>Espresso, lait chaud et mousse de lait onctueuse.</p></div><div class="menu-item-right">2 500 FCFA</div></div>
-                <div class="menu-item"><div class="menu-item-left"><h4>Thé / Infusion</h4><p>Sélection de thés parfumés.</p></div><div class="menu-item-right">2 000 FCFA</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Les softs</h4></div><div class="menu-item-right">1 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Ice tea pêche</h4></div><div class="menu-item-right">2 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Redbull</h4></div><div class="menu-item-right">2 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Schweppes</h4></div><div class="menu-item-right">2 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Eau pétillante</h4></div><div class="menu-item-right">2 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Eau minérale</h4></div><div class="menu-item-right">1 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Jus d'orange</h4></div><div class="menu-item-right">3 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Limonade maison</h4></div><div class="menu-item-right">3 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Espresso</h4></div><div class="menu-item-right">1 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Lipton</h4></div><div class="menu-item-right">1 500 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Capuccino</h4></div><div class="menu-item-right">3 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Café latte</h4></div><div class="menu-item-right">3 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Iced caramel</h4></div><div class="menu-item-right">3 000 fr</div></div>
+                <div class="menu-item"><div class="menu-item-left"><h4>Chocolat chaud</h4></div><div class="menu-item-right">3 000 fr</div></div>
             </div>
         </div>
     </section>
@@ -472,7 +478,7 @@
                 <h3>Horaires d'Ouverture</h3>
                 <p><strong>Jours :</strong> Du lundi au dimanche</p>
                 <p><strong>Horaires :</strong> 08h00 – 22h00</p>
-                <p style="margin-top: 1.5rem;">
+                <p style="margin-top: 1.2rem;">
                     <a href="tel:0703606060" class="btn-main" style="display:inline-block;">Réserver une table</a>
                 </p>
             </div>
@@ -481,7 +487,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Design minimaliste et fluide ✨</p>
+        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Design épuré & fluide ✨</p>
     </footer>
 
 </body>
