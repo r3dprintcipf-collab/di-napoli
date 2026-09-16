@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di Napoli — Restaurant Italien · Abidjan</title>
+    <!-- Google Fonts pour un look moderne et épuré -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FAF8F5;
+            --text-color: #2C2A29;
+            --accent-color: #C84B31; /* Touche terre cuite / terracotta italienne subtile */
+            --sand-color: #F0ECE1;
+            --white: #FFFFFF;
+            --gray-subtle: #767370;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta+ Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(250, 248, 245, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .btn-reserve {
+            background-color: var(--text-color);
+            color: var(--white) !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+
+        .btn-reserve:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 1rem;
+            margin-top: 60px;
+            background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-main, .btn-sec {
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-main {
+            background-color: var(--white);
+            color: var(--text-color);
+        }
+
+        .btn-main:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-sec {
+            border: 1px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-sec:hover {
+            background-color: var(--white);
+            color: var(--text-color);
+        }
+
+        /* SECTIONS GENERAL */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title span {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gray-subtle);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        /* ABOUT / CONCEPT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--gray-subtle);
+            font-size: 1.05rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            height: 400px;
+        }
+
+        /* MENU SECTION */
+        .menu-category {
+            margin-bottom: 3rem;
+        }
+
+        .menu-category h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--sand-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            transition: var(--transition);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-header-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-header-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .price {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .menu-item p {
+            font-size: 0.9rem;
+            color: var(--gray-subtle);
+        }
+
+        /* INFOS & CONTACT */
+        .info-container {
+            background-color: var(--sand-color);
+            border-radius: 20px;
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .info-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-box p {
+            margin-bottom: 0.8rem;
+            color: var(--gray-subtle);
+        }
+
+        .info-box strong {
+            color: var(--text-color);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            color: var(--gray-subtle);
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplifié pour mobile, peut être amélioré si besoin */
+            }
+            .about-grid, .info-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Di Napoli.</a>
+            <ul class="nav-links">
+                <li><a href="#about">Le Concept</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#info">Infos & Contact</a></li>
+                <li><a href="tel:0703606060" class="btn-reserve">07 03 60 60 60</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Les pâtes, le soleil et la dolce vita</h1>
+            <p>Une cuisine italienne, originale et gourmande au cœur d'Abidjan.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn-main">Découvrir le Menu</a>
+                <a href="tel:0703606060" class="btn-sec">Réserver une table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-title">
+            <span>Notre Philosophie</span>
+            <h2>BENVENUTO A DI NAPOLI</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Au cœur d'Abidjan, découvrez dans notre restaurant une cuisine italienne authentique, originale et résolument gourmande.</p>
+                <p>Tous nos plats sont exclusivement réalisés à base de produits frais et de saison pour vous faire voyager directement sous le soleil de l'Italie.</p>
+                <p>Di Napoli est le fruit d'un travail submergé d'une passion et d'une constante envie irrépressible de prendre plaisir à chaque bouchée.</p>
+            </div>
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=80" alt="Plat italien Di Napoli">
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu">
+        <div class="section-title">
+            <span>La Carte</span>
+            <h2>Nos Incontournables</h2>
+        </div>
+
+        <!-- Antipasti & Pâtes -->
+        <div class="menu-category">
+            <h3>Les Pâtes & Spécialités</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-header-item">
+                        <h4>Tagliatelle ai Frutti di Mare</h4>
+                        <span class="price">12 000 FCFA</span>
+                    </div>
+                    <p>Fruits de mer frais sautés à l'ail, tomates cerises fraîches et touche de vin blanc.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-header-item">
+                        <h4>Penne all'Arrabbiata</h4>
+                        <span class="price">8 500 FCFA</span>
+                    </div>
+                    <p>Sauce tomate maison relevée au piment frais, ail et persil plat.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-header-item">
+                        <h4>Lasagna Tradizionale</h4>
+                        <span class="price">10 000 FCFA</span>
+                    </div>
+                    <p>Pâtes fraîches, ragoût de boeuf mijoté longuement, béchamel onctueuse et mozzarella fondante.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pizzas / Desserts -->
+        <div class="menu-category">
+            <h3>Dolce Vita</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-header-item">
+                        <h4>Tiramisu Classico</h4>
+                        <span class="price">5 000 FCFA</span>
+                    </div>
+                    <p>Boudoirs imbibés d'espresso, crème mascarpone aérienne et cacao amer.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-header-item">
+                        <h4>Panna Cotta aux Fruits Rouges</h4>
+                        <span class="price">4 500 FCFA</span>
+                    </div>
+                    <p>Crème vanillée onctueuse sur son coulis de fruits rouges acidulé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFOS & CONTACT -->
+    <section id="info">
+        <div class="info-container">
+            <div class="info-box">
+                <h3>Informations Pratiques</h3>
+                <p><strong>Adresse :</strong> Prima Center, Abidjan, Côte d'Ivoire</p>
+                <p><strong>Téléphone :</strong> <a href="tel:0703606060" style="color:var(--text-color); text-decoration:underline;">07 03 60 60 60</a></p>
+                <p><strong>Horaires :</strong> Ouvert du lundi au dimanche, de 08h à 22h</p>
+            </div>
+            <div class="info-box">
+                <h3>Venez nous rendre visite</h3>
+                <p>Passez un moment d'exception en famille ou entre amis dans une ambiance chaleureuse et lumineuse. Pour toute réservation de groupe ou privatisation, contactez-nous directement par téléphone.</p>
+                <br>
+                <a href="tel:0703606060" class="btn-main" style="display:inline-block; background-color:var(--text-color); color:var(--white);">Appeler pour réserver</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Propulsé par un code ultra-rapide et propre ✨</p>
+    </footer>
+
+</body>
+</html>
