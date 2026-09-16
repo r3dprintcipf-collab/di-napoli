@@ -10,7 +10,7 @@
         :root {
             --bg-color: #FAF8F5;
             --text-color: #2C2A29;
-            --accent-color: #C84B31; /* Touche terre cuite / terracotta italienne subtile */
+            --accent-color: #C84B31;
             --sand-color: #F0ECE1;
             --white: #FFFFFF;
             --gray-subtle: #767370;
@@ -24,7 +24,7 @@
         }
 
         body {
-            font-family: 'Plus Jakarta+ Sans', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -41,7 +41,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(250, 248, 245, 0.9);
+            background-color: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -97,40 +97,40 @@
 
         /* HERO SECTION */
         .hero {
-            height: 90vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 1rem;
-            margin-top: 60px;
-            background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            color: var(--white);
-            position: relative;
+            padding: 8rem 2rem 4rem 2rem;
+            background-color: var(--sand-color);
+            color: var(--text-color);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 6vw, 5rem);
-            margin-bottom: 1rem;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
             font-weight: 600;
             letter-spacing: -1px;
+            line-height: 1.2;
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             font-weight: 300;
-            letter-spacing: 0.5px;
+            color: var(--gray-subtle);
         }
 
         .hero-btns {
             display: flex;
             gap: 1rem;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn-main, .btn-sec {
@@ -142,35 +142,34 @@
         }
 
         .btn-main {
-            background-color: var(--white);
-            color: var(--text-color);
+            background-color: var(--text-color);
+            color: var(--white);
         }
 
         .btn-main:hover {
             background-color: var(--accent-color);
-            color: var(--white);
         }
 
         .btn-sec {
-            border: 1px solid var(--white);
-            color: var(--white);
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
         }
 
         .btn-sec:hover {
-            background-color: var(--white);
-            color: var(--text-color);
+            background-color: var(--text-color);
+            color: var(--white);
         }
 
         /* SECTIONS GENERAL */
         section {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .section-title span {
@@ -183,34 +182,37 @@
         }
 
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             font-weight: 500;
         }
 
-        /* ABOUT / CONCEPT */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        /* TEXTUAL MANIFESTO / PHILOSOPHY */
+        .manifesto-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: var(--white);
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.02);
         }
 
-        .about-text p {
+        .manifesto-container h3 {
+            font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: var(--gray-subtle);
-            font-size: 1.05rem;
+            font-weight: 500;
         }
 
-        .about-img img {
-            width: 100%;
-            border-radius: 12px;
-            object-fit: cover;
-            height: 400px;
+        .manifesto-container p {
+            font-size: 1.1rem;
+            color: var(--gray-subtle);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
         }
 
         /* MENU SECTION */
         .menu-category {
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
         }
 
         .menu-category h3 {
@@ -223,20 +225,20 @@
 
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .menu-item {
             background: var(--white);
-            padding: 1.5rem;
+            padding: 1.8rem;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.02);
             transition: var(--transition);
         }
 
         .menu-item:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
         .menu-header-item {
@@ -246,7 +248,7 @@
         }
 
         .menu-header-item h4 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 600;
         }
 
@@ -272,12 +274,13 @@
 
         .info-box h3 {
             font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .info-box p {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             color: var(--gray-subtle);
+            font-size: 1.05rem;
         }
 
         .info-box strong {
@@ -296,15 +299,14 @@
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Simplifié pour mobile, peut être amélioré si besoin */
+                display: none;
             }
-            .about-grid, .info-container {
+            .info-container, .manifesto-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
                 padding: 2rem;
             }
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
         }
     </style>
@@ -327,43 +329,37 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Les pâtes, le soleil et la dolce vita</h1>
-            <p>Une cuisine italienne, originale et gourmande au cœur d'Abidjan.</p>
+            <h1>Les pâtes, le soleil et la dolce vita 🍋</h1>
+            <p>BENVENUTO A DI NAPOLI — Au cœur d'Abidjan, découvrez une cuisine italienne originale et gourmande.</p>
             <div class="hero-btns">
                 <a href="#menu" class="btn-main">Découvrir le Menu</a>
-                <a href="tel:0703606060" class="btn-sec">Réserver une table</a>
+                <a href="tel:0703606060" class="btn-sec">07 03 60 60 60</a>
             </div>
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT / PHILOSOPHIE -->
     <section id="about">
         <div class="section-title">
-            <span>Notre Philosophie</span>
-            <h2>BENVENUTO A DI NAPOLI</h2>
+            <span>Notre Identité</span>
+            <h2>L'Esprit Di Napoli</h2>
         </div>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Au cœur d'Abidjan, découvrez dans notre restaurant une cuisine italienne authentique, originale et résolument gourmande.</p>
-                <p>Tous nos plats sont exclusivement réalisés à base de produits frais et de saison pour vous faire voyager directement sous le soleil de l'Italie.</p>
-                <p>Di Napoli est le fruit d'un travail submergé d'une passion et d'une constante envie irrépressible de prendre plaisir à chaque bouchée.</p>
-            </div>
-            <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=80" alt="Plat italien Di Napoli">
-            </div>
+        <div class="manifesto-container">
+            <h3>BENVENUTO A DI NAPOLI</h3>
+            <p>Tous nos plats sont exclusivement réalisés à base de produits frais et de saison pour vous offrir une expérience authentique et savoureuse.</p>
+            <p>Di Napoli est le fruit d'un travail submergé d'une passion et d'une constante envie irrépressible de prendre plaisir à chaque bouchée.</p>
         </div>
     </section>
 
-    <!-- MENU -->
+    <!-- MENU TEXTUEL -->
     <section id="menu">
         <div class="section-title">
             <span>La Carte</span>
-            <h2>Nos Incontournables</h2>
+            <h2>Nos Spécialités & Gourmandises</h2>
         </div>
 
-        <!-- Antipasti & Pâtes -->
         <div class="menu-category">
-            <h3>Les Pâtes & Spécialités</h3>
+            <h3>Les Pâtes & Spécialités Fraîches</h3>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="menu-header-item">
@@ -389,9 +385,8 @@
             </div>
         </div>
 
-        <!-- Pizzas / Desserts -->
         <div class="menu-category">
-            <h3>Dolce Vita</h3>
+            <h3>Dolce Vita (Desserts)</h3>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="menu-header-item">
@@ -415,23 +410,25 @@
     <section id="info">
         <div class="info-container">
             <div class="info-box">
-                <h3>Informations Pratiques</h3>
-                <p><strong>Adresse :</strong> Prima Center, Abidjan, Côte d'Ivoire</p>
+                <h3>Informations & Localisation</h3>
+                <p><strong>Lieu :</strong> Abidjan, Côte d'Ivoire</p>
+                <p><strong>Adresse :</strong> Prima Center (Marcory Zone 4)</p>
                 <p><strong>Téléphone :</strong> <a href="tel:0703606060" style="color:var(--text-color); text-decoration:underline;">07 03 60 60 60</a></p>
-                <p><strong>Horaires :</strong> Ouvert du lundi au dimanche, de 08h à 22h</p>
             </div>
             <div class="info-box">
-                <h3>Venez nous rendre visite</h3>
-                <p>Passez un moment d'exception en famille ou entre amis dans une ambiance chaleureuse et lumineuse. Pour toute réservation de groupe ou privatisation, contactez-nous directement par téléphone.</p>
-                <br>
-                <a href="tel:0703606060" class="btn-main" style="display:inline-block; background-color:var(--text-color); color:var(--white);">Appeler pour réserver</a>
+                <h3>Horaires d'Ouverture</h3>
+                <p><strong>Jours :</strong> Du lundi au dimanche</p>
+                <p><strong>Plage horaire :</strong> 08h – 22h</p>
+                <p style="margin-top: 1.5rem;">
+                    <a href="tel:0703606060" class="btn-main" style="display:inline-block; background-color:var(--text-color); color:var(--white);">Réserver par Téléphone</a>
+                </p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Propulsé par un code ultra-rapide et propre ✨</p>
+        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Design épuré et textuel ✨</p>
     </footer>
 
 </body>
