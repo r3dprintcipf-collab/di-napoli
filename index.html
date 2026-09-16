@@ -11,8 +11,6 @@
             --bg-color: #FAF8F5;
             --text-color: #2C2A29;
             --accent-color: #C84B31;
-            --sand-color: #F0ECE1;
-            --white: #FFFFFF;
             --gray-subtle: #767370;
             --transition: all 0.3s ease;
         }
@@ -44,11 +42,11 @@
             background-color: rgba(250, 248, 245, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.04);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 1.2rem 2rem;
             display: flex;
@@ -85,7 +83,7 @@
 
         .btn-reserve {
             background-color: var(--text-color);
-            color: var(--white) !important;
+            color: #FFFFFF !important;
             padding: 0.6rem 1.2rem;
             border-radius: 50px;
             transition: var(--transition);
@@ -95,24 +93,24 @@
             background-color: var(--accent-color);
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION (Fond totalement confondu avec le body) */
         .hero {
-            min-height: 80vh;
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 8rem 2rem 4rem 2rem;
-            background-color: var(--sand-color);
+            background-color: var(--bg-color);
             color: var(--text-color);
         }
 
         .hero-content {
-            max-width: 900px;
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
             margin-bottom: 1.5rem;
             font-weight: 600;
             letter-spacing: -1px;
@@ -143,7 +141,7 @@
 
         .btn-main {
             background-color: var(--text-color);
-            color: var(--white);
+            color: #FFFFFF;
         }
 
         .btn-main:hover {
@@ -157,19 +155,19 @@
 
         .btn-sec:hover {
             background-color: var(--text-color);
-            color: var(--white);
+            color: #FFFFFF;
         }
 
         /* SECTIONS GENERAL */
         section {
             padding: 5rem 2rem;
-            max-width: 1200px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
         }
 
         .section-title span {
@@ -186,111 +184,101 @@
             font-weight: 500;
         }
 
-        /* TEXTUAL MANIFESTO / PHILOSOPHY */
+        /* MANIFESTO / PHILOSOPHY (Sans boîte blanche, fondu dans le fond) */
         .manifesto-container {
-            max-width: 800px;
-            margin: 0 auto;
             text-align: center;
-            background: var(--white);
-            padding: 4rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 25px rgba(0,0,0,0.02);
+            margin-bottom: 4rem;
         }
 
         .manifesto-container h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
             font-weight: 500;
         }
 
         .manifesto-container p {
             font-size: 1.1rem;
             color: var(--gray-subtle);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             line-height: 1.8;
         }
 
-        /* MENU SECTION */
+        /* MENU LIST (À la ligne, style épuré Kinu, sans boîtes ni cartes séparées) */
         .menu-category {
-            margin-bottom: 3.5rem;
+            margin-bottom: 4rem;
         }
 
         .menu-category h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid var(--sand-color);
-            padding-bottom: 0.5rem;
-            display: inline-block;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            padding-bottom: 0.8rem;
         }
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .menu-list {
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
         }
 
         .menu-item {
-            background: var(--white);
-            padding: 1.8rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-            transition: var(--transition);
-        }
-
-        .menu-item:hover {
-            transform: translateY(-4px);
-        }
-
-        .menu-header-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 0.5rem;
+            align-items: baseline;
+            background: transparent; /* Fond totalement confondu */
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+            padding-bottom: 1.2rem;
         }
 
-        .menu-header-item h4 {
+        .menu-item-left {
+            max-width: 75%;
+        }
+
+        .menu-item-left h4 {
             font-size: 1.15rem;
             font-weight: 600;
+            margin-bottom: 0.3rem;
+            color: var(--text-color);
         }
 
-        .price {
-            font-weight: 600;
-            color: var(--accent-color);
-        }
-
-        .menu-item p {
-            font-size: 0.9rem;
+        .menu-item-left p {
+            font-size: 0.95rem;
             color: var(--gray-subtle);
         }
 
-        /* INFOS & CONTACT */
-        .info-container {
-            background-color: var(--sand-color);
-            border-radius: 20px;
-            padding: 4rem;
+        .menu-item-right {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            white-space: nowrap;
+        }
+
+        /* INFOS & CONTACT (Sans boîte de couleur contrastée, totalement fondu) */
+        .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
+            margin-top: 2rem;
         }
 
         .info-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
         }
 
         .info-box p {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             color: var(--gray-subtle);
             font-size: 1.05rem;
-        }
-
-        .info-box strong {
-            color: var(--text-color);
         }
 
         /* FOOTER */
         footer {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem;
             border-top: 1px solid rgba(0,0,0,0.05);
             color: var(--gray-subtle);
             font-size: 0.9rem;
@@ -301,12 +289,20 @@
             .nav-links {
                 display: none;
             }
-            .info-container, .manifesto-container {
+            .info-grid {
                 grid-template-columns: 1fr;
-                padding: 2rem;
+                gap: 2.5rem;
             }
             .hero h1 {
                 font-size: 2.3rem;
+            }
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            .menu-item-left {
+                max-width: 100%;
             }
         }
     </style>
@@ -330,7 +326,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Les pâtes, le soleil et la dolce vita 🍋</h1>
-            <p>BENVENUTO A DI NAPOLI — Au cœur d'Abidjan, découvrez une cuisine italienne originale et gourmande.</p>
+            <p>BENVENUTO A DI NAPOLI — Au cœur d'Abidjan, découvrez une cuisine italienne originale, généreuse et gourmande.</p>
             <div class="hero-btns">
                 <a href="#menu" class="btn-main">Découvrir le Menu</a>
                 <a href="tel:0703606060" class="btn-sec">07 03 60 60 60</a>
@@ -351,56 +347,121 @@
         </div>
     </section>
 
-    <!-- MENU TEXTUEL -->
+    <!-- MENU COMPLET EN LISTE (STYLE KINŪ) -->
     <section id="menu">
         <div class="section-title">
             <span>La Carte</span>
-            <h2>Nos Spécialités & Gourmandises</h2>
+            <h2>Nos Plats & Spécialités</h2>
         </div>
 
+        <!-- Antipasti & Entrées -->
         <div class="menu-category">
-            <h3>Les Pâtes & Spécialités Fraîches</h3>
-            <div class="menu-grid">
+            <h3>Antipasti & Entrées</h3>
+            <div class="menu-list">
                 <div class="menu-item">
-                    <div class="menu-header-item">
-                        <h4>Tagliatelle ai Frutti di Mare</h4>
-                        <span class="price">12 000 FCFA</span>
+                    <div class="menu-item-left">
+                        <h4>Bruschetta al Pomodoro</h4>
+                        <p>Pain grillé à l'ail, tomates fraîches, basilic et huile d'olive extra vierge.</p>
                     </div>
-                    <p>Fruits de mer frais sautés à l'ail, tomates cerises fraîches et touche de vin blanc.</p>
+                    <div class="menu-item-right">4 500 FCFA</div>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-header-item">
-                        <h4>Penne all'Arrabbiata</h4>
-                        <span class="price">8 500 FCFA</span>
+                    <div class="menu-item-left">
+                        <h4>Carpaccio di Manzo</h4>
+                        <p>Fines tranches de bœuf cru, roquette, copeaux de parmesan et filet de citron.</p>
                     </div>
-                    <p>Sauce tomate maison relevée au piment frais, ail et persil plat.</p>
+                    <div class="menu-item-right">7 500 FCFA</div>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-header-item">
-                        <h4>Lasagna Tradizionale</h4>
-                        <span class="price">10 000 FCFA</span>
+                    <div class="menu-item-left">
+                        <h4>Burrata Fraîche & Tomates Cerises</h4>
+                        <p>Burrata crémeuse, tomates confites, pesto de basilic maison.</p>
                     </div>
-                    <p>Pâtes fraîches, ragoût de boeuf mijoté longuement, béchamel onctueuse et mozzarella fondante.</p>
+                    <div class="menu-item-right">8 000 FCFA</div>
                 </div>
             </div>
         </div>
 
+        <!-- Les Pâtes -->
         <div class="menu-category">
-            <h3>Dolce Vita (Desserts)</h3>
-            <div class="menu-grid">
+            <h3>Les Pâtes</h3>
+            <div class="menu-list">
                 <div class="menu-item">
-                    <div class="menu-header-item">
-                        <h4>Tiramisu Classico</h4>
-                        <span class="price">5 000 FCFA</span>
+                    <div class="menu-item-left">
+                        <h4>Tagliatelle ai Frutti di Mare</h4>
+                        <p>Fruits de mer frais sautés à l'ail, tomates cerises fraîches et touche de vin blanc.</p>
                     </div>
-                    <p>Boudoirs imbibés d'espresso, crème mascarpone aérienne et cacao amer.</p>
+                    <div class="menu-item-right">12 000 FCFA</div>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-header-item">
-                        <h4>Panna Cotta aux Fruits Rouges</h4>
-                        <span class="price">4 500 FCFA</span>
+                    <div class="menu-item-left">
+                        <h4>Penne all'Arrabbiata</h4>
+                        <p>Sauce tomate maison relevée au piment frais, ail et persil plat.</p>
                     </div>
-                    <p>Crème vanillée onctueuse sur son coulis de fruits rouges acidulé.</p>
+                    <div class="menu-item-right">8 500 FCFA</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-left">
+                        <h4>Spaghetti Carbonara Tradizionale</h4>
+                        <p>Guanciale croustillant, jaunes d'œufs, pecorino romano et poivre noir.</p>
+                    </div>
+                    <div class="menu-item-right">9 500 FCFA</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-left">
+                        <h4>Lasagna Tradizionale</h4>
+                        <p>Pâtes fraîches, ragoût de bœuf mijoté longuement, béchamel et mozzarella.</p>
+                    </div>
+                    <div class="menu-item-right">10 000 FCFA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Les Pizzas -->
+        <div class="menu-category">
+            <h3>Nos Pizzas au Feu de Bois</h3>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class="menu-item-left">
+                        <h4>Pizza Margherita</h4>
+                        <p>Sauce tomate San Marzano, mozzarella fior di latte, basilic frais.</p>
+                    </div>
+                    <div class="menu-item-right">7 000 FCFA</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-left">
+                        <h4>Pizza Diavola</h4>
+                        <p>Sauce tomate, mozzarella, salami piccante de Calabre et piments.</p>
+                    </div>
+                    <div class="menu-item-right">8 500 FCFA</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-left">
+                        <h4>Pizza Quattro Formaggi</h4>
+                        <p>Mozzarella, gorgonzola, parmesan, provolone fondu.</p>
+                    </div>
+                    <div class="menu-item-right">9 000 FCFA</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desserts / Dolce Vita -->
+        <div class="menu-category">
+            <h3>Dolce Vita (Desserts)</h3>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class="menu-item-left">
+                        <h4>Tiramisu Classico</h4>
+                        <p>Boudoirs imbibés d'espresso, crème mascarpone aérienne et cacao amer.</p>
+                    </div>
+                    <div class="menu-item-right">5 000 FCFA</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-left">
+                        <h4>Panna Cotta aux Fruits Rouges</h4>
+                        <p>Crème vanillée onctueuse sur son coulis de fruits rouges acidulé.</p>
+                    </div>
+                    <div class="menu-item-right">4 500 FCFA</div>
                 </div>
             </div>
         </div>
@@ -408,19 +469,23 @@
 
     <!-- INFOS & CONTACT -->
     <section id="info">
-        <div class="info-container">
+        <div class="section-title">
+            <span>Venir nous voir</span>
+            <h2>Informations & Contacts</h2>
+        </div>
+        <div class="info-grid">
             <div class="info-box">
-                <h3>Informations & Localisation</h3>
-                <p><strong>Lieu :</strong> Abidjan, Côte d'Ivoire</p>
+                <h3>Où nous trouver ?</h3>
+                <p><strong>Ville :</strong> Abidjan, Côte d'Ivoire</p>
                 <p><strong>Adresse :</strong> Prima Center (Marcory Zone 4)</p>
                 <p><strong>Téléphone :</strong> <a href="tel:0703606060" style="color:var(--text-color); text-decoration:underline;">07 03 60 60 60</a></p>
             </div>
             <div class="info-box">
                 <h3>Horaires d'Ouverture</h3>
                 <p><strong>Jours :</strong> Du lundi au dimanche</p>
-                <p><strong>Plage horaire :</strong> 08h – 22h</p>
+                <p><strong>Horaires :</strong> 08h00 – 22h00</p>
                 <p style="margin-top: 1.5rem;">
-                    <a href="tel:0703606060" class="btn-main" style="display:inline-block; background-color:var(--text-color); color:var(--white);">Réserver par Téléphone</a>
+                    <a href="tel:0703606060" class="btn-main" style="display:inline-block;">Réserver une table</a>
                 </p>
             </div>
         </div>
@@ -428,7 +493,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Design épuré et textuel ✨</p>
+        <p>&copy; 2026 Di Napoli Abidjan. Tous droits réservés. Design minimaliste et fluide ✨</p>
     </footer>
 
 </body>
